@@ -1,0 +1,128 @@
+.detailsContainer {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    color: #fff;
+}
+
+.dotsBg {
+    position: absolute;
+    right: 25px;
+    top: -25px;
+    transform: scale(0.5);
+    opacity: 0.75;
+}
+
+.backBg {
+    position: relative;
+    color: #fff;
+}
+
+.backBg::before {
+    content: "";
+    position: absolute;
+    left: -72px;
+    top: -65px;
+    transform: rotate(-15deg);
+    height: 105px;
+    width: 115px;
+    border-radius: 20px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(255, 255, 255, 0.1) 100%
+    );
+}
+
+.pokemonBg {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 90%;
+    bottom: 0;
+}
+
+.pokemonBg.rotar {
+    animation-name: girar;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    opacity: 0.12;
+}
+
+
+.singleBg {
+    position: absolute;
+    right: -18px;
+    opacity: 0.2;
+    transform: scale(1.3);
+}
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.pokeCard {
+    padding: 0 18px;
+}
+
+.pokeDetails {
+    width: 100%;
+    background-color: #fff;
+    color: #333;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 32px 24px;
+}
+
+.detailsBtn {
+    /* border: 1px solid lightgray; */
+    padding: 0 0 15px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in;
+}
+
+.detailsBtn.active {
+    border-bottom: 2px solid #9691f1;
+    font-weight: 600;
+}
+
+.aboutSection,
+.evolutionSection,
+.movesSection,
+.statsSection {
+    transition-delay: 2s;
+    transition: all 0.6s ease-in;
+    transform: translateX(-150%);
+}
+
+.aboutSection.active,
+.evolutionSection.active,
+.movesSection.active,
+.statsSection.active {
+    transform: translateX(0);
+}
+
+@media (min-width: 768px) {
+    .detailsContainer {
+        width: 40%;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        margin: 0 auto;
+    }
+
+    .pokeCard {
+        padding: 0 28px;
+    }
+}
