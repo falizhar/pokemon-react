@@ -63,7 +63,7 @@ const Breeding = () => {
                 <div className='flex items-center text-left justify-start my-1'>
                     <p className='text-gray-400 font-medium mr-20'>Gender</p>
                     {genderPercentage === -1 ? (
-                      'Genderless'
+                        <p className='pl-5'> Genderless </p>
                     ) : (
                         <>
                             <figure className='flex items-center justify-center mx-3 pl-2'>

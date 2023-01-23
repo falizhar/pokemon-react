@@ -15,7 +15,7 @@ const Training = () => {
                     Base Experience
                 </p>
                 <span className='pl-5'>
-                    {singlePokemon.base_experience} EXP
+                    {singlePokemon.base_experience ?? 0} EXP
                 </span>
             </div>
             <div className='flex items-center my-3'>
