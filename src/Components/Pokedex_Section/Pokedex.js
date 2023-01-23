@@ -6,7 +6,7 @@ import PokedexContainer from './Pokémon_List/PokedexContainer';
 import PokedexContext from '../../Context/GlobalContext';
 
 function Pokedex() {
-  const { setSinglePokemon } = useContext(PokedexContext);
+  const { isSinglePoke, setSinglePokemon } = useContext(PokedexContext);
 
   useEffect(() => {
     setSinglePokemon([]);
@@ -14,7 +14,7 @@ function Pokedex() {
   }, []);
 
   return (
-    <section className="pokedex relative">
+    <section className="pokedex relative" hidden={!!isSinglePoke}>
       <img className="pokeBg" src={Background} alt="Pokeball bg" />
       <Header />
       <PokedexContainer />
