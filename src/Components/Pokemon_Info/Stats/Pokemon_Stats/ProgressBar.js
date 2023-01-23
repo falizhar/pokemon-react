@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ProgressBar = ({ percentage, color, name }) => {
+  const newColor = percentage >= 60 ? '#7bc398' : `${color}`;
   const fillerStats = {
     height: '100%',
     transition: 'width 1s ease-in-out',
     width: `${percentage / 1.5}%`,
-    backgroundColor: `${color}`,
+    backgroundColor: `${newColor}`,
     borderRadius: 'inherit',
     textAlign: 'left',
     position: 'absolute',
