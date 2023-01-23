@@ -8,7 +8,6 @@ const About = ({ about }) => (
     className={`${about ? 'aboutSection active' : 'aboutSection'}`}
   >
     <Breeding/>
-    <br/>
     <Training/>
   </section>
 );

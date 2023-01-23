@@ -5,7 +5,7 @@ const ProgressBar = ({ percentage, color, name }) => {
   const fillerStats = {
     height: '100%',
     transition: 'width 1s ease-in-out',
-    width: `${percentage}px`,
+    width: `${percentage / 1.5}%`,
     backgroundColor: `${color}`,
     borderRadius: 'inherit',
     textAlign: 'left',
@@ -16,7 +16,7 @@ const ProgressBar = ({ percentage, color, name }) => {
   return (
     <article className='flex items-center justify-between w-full mb-2.5'>
       <div className='flex items-center justify-between md:w-1/4 w-1/2 pr-4'>
-        <p className='pr-3 text-gray-400 font-medium capitalize'>
+        <p className='flex pr-3 text-gray-400 font-medium capitalize my-0.5'>
           {name}
         </p>
         <span className='font-medium'>{percentage}</span>

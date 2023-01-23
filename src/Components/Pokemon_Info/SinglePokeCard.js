@@ -38,7 +38,7 @@ function SinglePokeCard({ name, id, types }) {
               ))}
             </div>
             <span className="font-medium">
-              {pokemonAbout.genera.find((gen) => gen.language.name === 'en')?.genus.split(' ').slice(0, -1).join(' ')}
+              {pokemonAbout.genera.find((gen) => gen.language.name === 'en')?.genus}
             </span>
           </div>
         </figcaption>
