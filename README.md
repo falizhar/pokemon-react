@@ -1,4 +1,4 @@
-# Project Name
+# Pokedex
 
 Description of the project and its features.
 
